@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 86px;
+    padding-right: 86px;
     font-family: "Roboto Slab", serif;
 }
 
@@ -9,6 +9,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    color: #594a47;
 }
 
 .header_logo {
