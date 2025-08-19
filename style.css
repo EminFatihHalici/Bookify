@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+
+.header_logo {
+    display: flex;
+    justify-content: left;
+}
