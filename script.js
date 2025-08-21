@@ -187,6 +187,6 @@ function renderImages() {
 }
 
 function getNotesHTML(booksIndex) {
-    return books;
+    return books[booksIndex];
 
 }
