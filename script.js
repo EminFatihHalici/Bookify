@@ -187,5 +187,17 @@ function renderImages() {
 }
 
 function getNotesHTML(booksIndex) {
-    return `<h2>${[booksIndex]}`
+    let book = books[booksIndex];
+    return `<h2>${book.name}</h2>
+    <p>${book.price}</p>
+    <p>${book.likes}</p>
+    <p>Autor: ${book.author}</p>
+    <p>Erscheinungsjahr: ${book.publishedYear}</p>
+    <p>Genre: ${book.genre}</p>
+    <h3>Kommentare:</h3>
+    
+
+
+    
+    `
 }
