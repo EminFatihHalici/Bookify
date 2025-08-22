@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 h3 {
@@ -76,4 +76,11 @@ input:checked ~ label {
 }
 label {
   font-size: 5em;
+}
+
+.like_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
