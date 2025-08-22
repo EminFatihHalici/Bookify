@@ -67,3 +67,13 @@ footer {
     justify-content: center;
 
 }
+
+input {
+  display: none;
+}
+input:checked ~ label {
+  color: red;
+}
+label {
+  font-size: 5em;
+}
