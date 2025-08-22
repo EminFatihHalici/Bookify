@@ -21,7 +21,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 28px;
 }
 
 
@@ -83,5 +83,8 @@ label {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
+p {
+    font-size: 24px;
 }
