@@ -198,7 +198,6 @@ function getNotesHTML(booksIndex) {
     <p>Erscheinungsjahr: ${book.publishedYear}</p>
     <p>Genre: ${book.genre}</p>
     <h3>Kommentare:</h3>
-    <p>[${book.comments[booksIndex].name}] : ${book.comments[booksIndex].comment} </p>
     </div>
     `
 }
