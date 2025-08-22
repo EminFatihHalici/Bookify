@@ -188,6 +188,7 @@ function renderImages() {
 
 function getNotesHTML(booksIndex) {
     let book = books[booksIndex];
+
     return `
     <div class="book_container">
     <h2>${book.name}</h2>
@@ -197,7 +198,7 @@ function getNotesHTML(booksIndex) {
     <p>Erscheinungsjahr: ${book.publishedYear}</p>
     <p>Genre: ${book.genre}</p>
     <h3>Kommentare:</h3>
-
+    <p>[${book.comments[booksIndex].name}] : ${book.comments[booksIndex].comment} </p>
     </div>
     `
 }
