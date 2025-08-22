@@ -182,11 +182,11 @@ function renderImages() {
 
     let contentImg = document.getElementById('content');
     for (let booksIndex = 0; booksIndex < books.length; booksIndex++) {
+        contentImg.innerHTML = "";
         contentImg.innerHTML += getNotesHTML(booksIndex);
     }
 }
 
 function getNotesHTML(booksIndex) {
-    return books[booksIndex];
-
+    return `<h2>${[booksIndex]}`
 }
