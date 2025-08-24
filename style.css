@@ -27,7 +27,6 @@ h3 {
     justify-content: center;
 }
 
-
 .header_logo {
     display: flex;
     justify-content: left;
@@ -105,8 +104,28 @@ p {
     font-size: 24px;
 }
 
-
-
 .button_text {
     display: flex;
+    justify-content: center;
+    color: #594a47;
+}
+
+textarea:hover {
+    background-color: aqua;
+}
+
+textarea {
+    text-align: center;
+    background-color: #594a47;
+    border: none;
+    resize: none;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button {
+    background-color: #594a47;
+    border-style: none;
 }
