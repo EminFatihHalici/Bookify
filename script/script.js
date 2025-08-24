@@ -186,6 +186,25 @@ function renderImages() {
     }
 }
 
+function getCommentsTemplate(bookIndex) {
+    let commentsHTML = "";
+    let comments = books[bookIndex].comments;
+
+    for (let i = 0; i < comments.length; i++) {
+        commentsHTML += `
+            <div class="single_comment">
+                <p>${comments[i].name}: ${comments[i].comment}</p>
+            </div>
+        `;
+    }
+
+    if (comments.length === 0) {
+        commentsHTML = "<p>No comments.</p>";
+    }
+
+    return commentsHTML;
+}
+
 function getNotesHTML(booksIndex) {
     let book = books[booksIndex];
 
@@ -220,9 +239,9 @@ function getNotesHTML(booksIndex) {
 
                 <div class="comment_box">
                     <div class="comments">
-                        <p>${book.comments}</p>
+                        <p>${getCommentsTemplate(booksIndex)}</p>
                     </div>
-                    <div class="button_text"><textarea name="comments" id="comments">Add comment</textarea>
+                    <div class="button_text"><textarea name="comms" id="commnts">Add comment</textarea>
                     <button type="submit" formaction="send.php">Send</button></div>
                 </div>
     `
