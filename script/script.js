@@ -205,6 +205,25 @@ function getCommentsTemplate(bookIndex) {
     return commentsHTML;
 }
 
+function addComment(bookIndex) {
+    let input = document.getElementById(`commentInput_${bookIndex}`);
+    let text = input.value.trim();
+
+    if (text === "") {
+        alert("Write something");
+        return;
+    }
+
+    books[bookIndex].comments.push({
+        name: "You", 
+        comment: text
+    });
+
+    document.getElementById(`comments_${bookIndex}`).innerHTML = getCommentsTemplate(bookIndex);
+
+    input.value = "";
+}
+
 function getNotesHTML(booksIndex) {
     let book = books[booksIndex];
 
@@ -238,11 +257,14 @@ function getNotesHTML(booksIndex) {
                 <h3>Kommentare:</h3>
 
                 <div class="comment_box">
-                    <div class="comments">
-                        <p>${getCommentsTemplate(booksIndex)}</p>
+                    <div id="comments_${booksIndex}" class="comments">
+                     ${getCommentsTemplate(booksIndex)}
                     </div>
-                    <div class="button_text"><textarea name="comms" id="commnts">Add comment</textarea>
-                    <button type="submit" formaction="send.php">Send</button></div>
+                     <div class="button_text">
+                      <textarea id="commentInput_${booksIndex}" placeholder="Add comment..."></textarea>
+                      <button onclick="addComment(${booksIndex})">Send</button>
+                      </div>
                 </div>
+            </div> 
     `
 }
