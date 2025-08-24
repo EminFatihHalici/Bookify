@@ -1,9 +1,8 @@
 function getNotesHTML(booksIndex) {
     let book = books[booksIndex];
 
-    return
-    `
-     <div class="book_title">
+    return `
+  <div class="book_title">
                 <h2>${book.name}</h2>
             </div>
 
@@ -32,14 +31,14 @@ function getNotesHTML(booksIndex) {
                 <h3>Kommentare:</h3>
 
                 <div class="comment_box">
-                    <div class="comments">
-                        <p>${book.comments}</p>
+                    <div id="comments_${booksIndex}" class="comments">
+                     ${getCommentsTemplate(booksIndex)}
                     </div>
-                    <div class="button_text"><textarea name="comments" id="comments">Add comment</textarea>
-                    <button type="submit" formaction="send.php">Send</button></div>
+                     <div class="button_text">
+                      <textarea id="commentInput_${booksIndex}" placeholder="Add comment..."></textarea>
+                      <button onclick="addComment(${booksIndex})">Send</button>
+                      </div>
                 </div>
-
-            </div>
+            </div> 
     `
-
-}    
+}
