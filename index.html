@@ -55,8 +55,11 @@
                 <h3>Kommentare:</h3>
 
                 <div class="comment_box">
-                    <div><textarea name="comments" id="comments">Schreibe deinen Kommentar</textarea>
-                    <button type="submit" formaction="send.php">Senden</button></div>
+                    <div class="comments">
+                        <p>${book.comments}</p>
+                    </div>
+                    <div><textarea name="comments" id="comments">Add comment</textarea>
+                    <button type="submit" formaction="send.php">Send</button></div>
                 </div>
 
             </div>
